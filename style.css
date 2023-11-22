@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Roboto:wght@300;400;500&display=swap");
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding: 0 1rem;
+}
+
+header {
+  text-align: center;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.25);
+  padding: 0.3rem;
+  position: relative;
+}
+
+.city {
+  background-color: #EAEAEA;
+  text-align: center;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+.city i {
+  font-size: 1.2rem;
+}
+
+.xplore {
+  text-align: center;
+}
+.xplore h2 {
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.xplore p {
+  font-size: 1rem;
+}
+.xplore button {
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  color: white;
+  font-weight: 400;
+  font-size: 1, 5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 2px 1px 16px -3px #000000;
+  margin-top: 1rem;
+  transition: transform 200ms;
+}
+.xplore button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+.order-list ol {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.order-list li {
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  flex-grow: 1;
+  box-shadow: 2px 1px 16px -3px #000000;
+  border-radius: 1rem;
+}
+.order-list li:hover {
+  transform: scale(1.02);
+}
+
+h1 {
+  font-size: 20px;
+}
+
+
+
+/*# sourceMappingURL=style.css.map */
