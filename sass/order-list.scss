@@ -1,4 +1,4 @@
-$lightgrey: #7e7e7e;
+$grey: #7e7e7e;
 $purple:#9356dc;
 .order-list {
     & ol {
@@ -32,7 +32,7 @@ $purple:#9356dc;
        }
        & i.fas {
         margin-right: 1rem;
-        color: $lightgrey;
+        color: $grey;
        }
     }
 

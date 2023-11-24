@@ -93,6 +93,22 @@ header {
   color: #7e7e7e;
 }
 
+.menus {
+  background-color: #f6f6f6;
+}
+.menus h2 {
+  margin-top: 2rem;
+}
+.menus .menus__cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+.menus .cards {
+  border: 1px solid black;
+  height: 4rem;
+  min-width: 30rem;
+}
+
 h1 {
   font-size: 20px;
 }
