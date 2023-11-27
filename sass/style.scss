@@ -1,12 +1,12 @@
-@import "./base.scss";
-@import "./header.scss";
-@import "./city.scss";
-@import "./xplore.scss";
-@import "./order-list.scss";
-@import "./menus.scss";
-
-h1 {
-    font-size: 20px;
-}
+@import"./utils/base.scss";
+@import"./layout/header.scss";
+@import "./layout/city.scss";
+@import "./layout/menus.scss";
+@import "./layout/order-list.scss";
+@import "./layout/xplore.scss";
+@import "./layout/footer.scss";
+@import "./utils/base.scss";
+@import"./utils/mixin.scss";
+@import "./utils/colors.scss";
 
   /*# sourceMappingURL=style.css.map */

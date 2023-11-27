@@ -1,4 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope&family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Roboto:wght@300;400;500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope&family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
 *, ::before, ::after {
   box-sizing: border-box;
 }
@@ -10,6 +13,20 @@ body {
 
 main {
   padding: 0 1rem;
+}
+
+h1 {
+  font-size: 20px;
+}
+
+h2 {
+  padding: 2rem 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 header {
@@ -32,31 +49,67 @@ header {
   font-size: 1.2rem;
 }
 
-.xplore {
-  text-align: center;
+.menus {
+  background-color: #f6f6f6;
+  margin-bottom: 2rem;
 }
-.xplore h2 {
-  margin-top: 2rem;
+.menus .menus__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 900px) {
+  .menus .menus__cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.menus .menus__cards .new {
+  position: relative;
+}
+.menus .menus__cards .new::before {
+  content: "Nouveau";
+  position: absolute;
+  height: 2rem;
+  width: 5rem;
+  background-color: #99E2D0;
+  color: #1b6150;
+  display: grid;
+  place-items: center;
+  right: 1rem;
+  top: 1rem;
+}
+.menus .cards__description {
+  position: relative;
+  background-color: white;
+  border-radius: 0 0 1rem 1rem;
+}
+.menus .cards__description h3, .menus .cards__description p {
+  margin: 0.5rem;
+}
+.menus .cards__description i {
   font-size: 2rem;
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.xplore p {
-  font-size: 1rem;
+.menus .cards__description .fa-solid {
+  opacity: 0;
 }
-.xplore button {
+.menus .cards__description .fa-solid:hover {
+  opacity: 1;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  transition: all 0.4s ease-in-out;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  color: white;
-  font-weight: 400;
-  font-size: 1, 5rem;
-  padding: 1rem 2rem;
-  border: none;
-  border-radius: 2rem;
-  box-shadow: 2px 1px 16px -3px #000000;
-  margin-top: 1rem;
-  transition: transform 200ms;
 }
-.xplore button:hover {
-  transform: scale(1.02);
-  opacity: 0.9;
+.menus .cards img {
+  height: 180px;
+  object-fit: cover;
+  width: 100%;
+  border-radius: 2rem 2rem 0 0;
 }
 
 .order-list ol {
@@ -93,24 +146,68 @@ header {
   color: #7e7e7e;
 }
 
-.menus {
-  background-color: #f6f6f6;
+.xplore {
+  text-align: center;
 }
-.menus h2 {
-  margin-top: 2rem;
+.xplore h2 {
+  font-size: 2rem;
 }
-.menus .menus__cards {
-  display: flex;
-  flex-wrap: wrap;
+.xplore p {
+  font-size: 1rem;
 }
-.menus .cards {
-  border: 1px solid black;
-  height: 4rem;
-  min-width: 30rem;
+.xplore button {
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  color: white;
+  font-weight: 400;
+  font-size: 1, 5rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 2px 1px 16px -3px #000000;
+  margin-top: 1rem;
+  transition: transform 200ms;
+}
+.xplore button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
+}
+
+footer {
+  background-color: #353535;
+  padding: 1rem 2rem;
+  color: white;
+}
+footer h2 {
+  font-family: "Shrikhand", serif;
+  font-weight: 400;
+  padding: 1rem 0;
+}
+
+*, ::before, ::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  padding: 0 1rem;
 }
 
 h1 {
   font-size: 20px;
+}
+
+h2 {
+  padding: 2rem 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 

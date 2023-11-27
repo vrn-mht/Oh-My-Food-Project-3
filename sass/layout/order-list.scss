@@ -1,5 +1,5 @@
-$grey: #7e7e7e;
-$purple:#9356dc;
+@use"../utils/colors.scss";
+@import "../utils/mixin.scss";
 .order-list {
     & ol {
         display: flex;
@@ -20,7 +20,7 @@ $purple:#9356dc;
         @include zoom;
        }
        .steps {
-        background:$purple;
+        background:colors.$purple;
         color: white;
         width: 20px;
         display: block;
@@ -32,7 +32,7 @@ $purple:#9356dc;
        }
        & i.fas {
         margin-right: 1rem;
-        color: $grey;
+        color: colors.$grey;
        }
     }
 

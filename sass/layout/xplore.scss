@@ -1,8 +1,9 @@
-@import "mixin.scss";
+@import "../utils/mixin.scss";
+
 .xplore {
     text-align: center;
     & h2 {
-      margin-top: 2rem;
+
       font-size: 2rem;
      }
      & p {
