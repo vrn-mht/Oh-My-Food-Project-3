@@ -1,6 +1,7 @@
-@use"../utils/colors.scss";
+@use"../utils/variables.scss";
+@import"../utils/mixin.scss";
 
-.menus  {background-color:colors.$lightgrey;
+.menus  {background-color:variables.$lightgrey;
     margin-bottom: 2rem;
   
     .menus__cards{
@@ -19,8 +20,8 @@
             position: absolute;
             height: 2rem;
             width: 5rem;
-            background-color: colors.$blueazur;
-            color: darken($color: colors.$blueazur, $amount: 50%);
+            background-color: variables.$blueazur;
+            color: darken($color: variables.$blueazur, $amount: 50%);
             display: grid;
             place-items: center;
             right: 1rem;
@@ -28,11 +29,20 @@
         }
     }
     .cards {
+        img {
+            height: 180px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: 2rem 2rem 0 0;
+            display: flex;
+        }
        
        &__description {  
         position: relative;
         background-color: white;
         border-radius: 0 0 1rem 1rem;  
+        display: flex;
+        flex-direction: column;
         h3,p {
             margin: 0.5rem;
         }
@@ -52,7 +62,7 @@
                     background-clip: text;
                     -webkit-background-clip: text;
                     transition: all 0.4s ease-in-out;
-                    background-image: linear-gradient(0deg,rgba(147,86,220,.9),rgba(255,121,218,.9));
+                   @include gradient(1);
                 }
                 
               }
@@ -60,12 +70,7 @@
     
        }
       
-        img {
-            height: 180px;
-            object-fit: cover;
-            width: 100%;
-            border-radius: 2rem 2rem 0 0
-        }
+
        
     }
 

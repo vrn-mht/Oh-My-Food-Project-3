@@ -4,3 +4,6 @@
 @mixin zoom {
     transform: scale(1.02);
  }
+ @mixin gradient ($opacity: 0.9) {
+ background-image:linear-gradient(0deg,rgba(147,86,220,$opacity),rgba(255,121,218,$opacity));
+ }
