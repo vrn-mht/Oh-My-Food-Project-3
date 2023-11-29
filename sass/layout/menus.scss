@@ -20,8 +20,8 @@
             position: absolute;
             height: 2rem;
             width: 5rem;
-            background-color: variables.$blueazur;
-            color: darken($color: variables.$blueazur, $amount: 50%);
+            background-color: variables.$tertiary-color;
+            color: darken($color: variables.$tertiary-color, $amount: 50%);
             display: grid;
             place-items: center;
             right: 1rem;
@@ -39,7 +39,7 @@
        
        &__description {  
         position: relative;
-        background-color: white;
+        background-color: variables.$white;
         border-radius: 0 0 1rem 1rem;  
         display: flex;
         flex-direction: column;

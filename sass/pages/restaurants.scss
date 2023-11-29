@@ -7,23 +7,36 @@
     display: block;
 }
 
-.resto_main h2 {
+.resto-main {
+padding: 0;
+@media (min-width:$breakpoint){
+    padding: 0 1rem;
+    background:$white;
+    
+}
+.resto_title h2 {
     font-family: 'Shrikhand', serif;
-    border-radius: 40px 40px 0 0;
+    @media (min-width: $breakpoint) {
+        text-align: center;
+    }
      }
-     .resto_main { 
+     .resto_title { 
         position: relative;
-        padding: 0 2rem;
+        padding: 0 0.9rem;
         margin-top: -2rem;
-        background: white;
-        border-radius: 2.3rem;
+        background:$lightgrey;
+        border-radius: 2.3rem 2.3em 0 0;
             i {
-            font-size: 2rem;
-            position: absolute;
-            right: 1rem;
-            top: 50%;
-            transform: translateY(-50%);
+                font-size: 23px;
+                position: absolute;
+                right: 2.6rem;
+                top: 15%;
+                transform: translateY(-50%);
+                @media (min-width: $breakpoint) {
+                    right: 18rem;
+                }
               }
+
         .fa-solid {
             opacity: 0;
             &:hover {
@@ -36,5 +49,32 @@
             } 
           }
      }
+     .menu {
+        background-color: $lightgrey;
+        display: grid;
+        gap: 1rem;
+        .menu_category { background: $white;
+            border-radius: 1rem;
+     }
+     }
+     .menu-item {
+        display: flex;
+        .menu-item__price {
+            margin-left: auto;
+            font-weight: 900;
+            display: flex;
+            align-items: flex-end;
+        }
+        .menu-item__description {
+            padding: 1rem;
+        }
+        p,h4 {
+            margin: 0;
+            padding: 0;
+        }
+        .menu-item__check {
+            background-color: $tertiary-color;
+        }
+     }
 
-
+    }

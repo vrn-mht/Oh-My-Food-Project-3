@@ -220,35 +220,80 @@ a {
   display: block;
 }
 
-.resto_main h2 {
+.resto-main {
+  padding: 0;
+}
+@media (min-width: 768px) {
+  .resto-main {
+    padding: 0 1rem;
+    background: white;
+  }
+}
+.resto-main .resto_title h2 {
   font-family: "Shrikhand", serif;
-  border-radius: 40px 40px 0 0;
 }
-
-.resto_main {
+@media (min-width: 768px) {
+  .resto-main .resto_title h2 {
+    text-align: center;
+  }
+}
+.resto-main .resto_title {
   position: relative;
-  padding: 0 2rem;
+  padding: 0 0.9rem;
   margin-top: -2rem;
-  background: white;
-  border-radius: 2.3rem;
+  background: #f6f6f6;
+  border-radius: 2.3rem 2.3em 0 0;
 }
-.resto_main i {
-  font-size: 2rem;
+.resto-main .resto_title i {
+  font-size: 23px;
   position: absolute;
-  right: 1rem;
-  top: 50%;
+  right: 2.6rem;
+  top: 15%;
   transform: translateY(-50%);
 }
-.resto_main .fa-solid {
+@media (min-width: 768px) {
+  .resto-main .resto_title i {
+    right: 18rem;
+  }
+}
+.resto-main .resto_title .fa-solid {
   opacity: 0;
 }
-.resto_main .fa-solid:hover {
+.resto-main .resto_title .fa-solid:hover {
   opacity: 1;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   transition: all 0.4s ease-in-out;
   background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
+}
+.resto-main .menu {
+  background-color: #f6f6f6;
+  display: grid;
+  gap: 1rem;
+}
+.resto-main .menu .menu_category {
+  background: white;
+  border-radius: 1rem;
+}
+.resto-main .menu-item {
+  display: flex;
+}
+.resto-main .menu-item .menu-item__price {
+  margin-left: auto;
+  font-weight: 900;
+  display: flex;
+  align-items: flex-end;
+}
+.resto-main .menu-item .menu-item__description {
+  padding: 1rem;
+}
+.resto-main .menu-item p, .resto-main .menu-item h4 {
+  margin: 0;
+  padding: 0;
+}
+.resto-main .menu-item .menu-item__check {
+  background-color: #99E2D0;
 }
 
 
