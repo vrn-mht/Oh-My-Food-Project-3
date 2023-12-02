@@ -278,15 +278,19 @@ a {
 }
 .resto-main .menu-item {
   display: flex;
+  overflow: hidden;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 2px #7e7e7e;
 }
 .resto-main .menu-item .menu-item__price {
   margin-left: auto;
   font-weight: 900;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
 }
 .resto-main .menu-item .menu-item__description {
   padding: 1rem;
+  border-radius: 1rem;
 }
 .resto-main .menu-item p, .resto-main .menu-item h4 {
   margin: 0;
@@ -294,6 +298,18 @@ a {
 }
 .resto-main .menu-item .menu-item__check {
   background-color: #99E2D0;
+  margin-right: -4rem;
+  width: 4rem;
+  border-radius: 0 1rem 1rem 0;
+  transition: margin-right 0.5s;
+  display: grid;
+  place-items: center;
+}
+.resto-main .menu-item .menu-item__check .fa2-xs {
+  background-color: white;
+}
+.resto-main .menu-item:hover .menu-item__check {
+  margin-right: 0;
 }
 
 
