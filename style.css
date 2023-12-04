@@ -287,6 +287,8 @@ a {
   font-weight: 900;
   display: flex;
   align-items: center;
+  margin-right: 1rem;
+  margin-top: 1rem;
 }
 .resto-main .menu-item .menu-item__description {
   padding: 1rem;
@@ -304,9 +306,16 @@ a {
   transition: margin-right 0.5s;
   display: grid;
   place-items: center;
+  position: relative;
 }
-.resto-main .menu-item .menu-item__check .fa2-xs {
-  background-color: white;
+.resto-main .menu-item .menu-item__check i {
+  display: grid;
+  place-items: center;
+  background: white;
+  aspect-ratio: 1;
+  width: 2rem;
+  border-radius: 50%;
+  color: #99E2D0;
 }
 .resto-main .menu-item:hover .menu-item__check {
   margin-right: 0;
