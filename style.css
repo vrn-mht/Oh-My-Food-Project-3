@@ -125,7 +125,7 @@ header {
   background-color: #f6f6f6;
   padding: 1rem 2rem;
   flex-grow: 1;
-  box-shadow: 2px 1px 16px -3px #000000;
+  box-shadow: 2px 1px 16px -3px #f6f6f6;
   border-radius: 1rem;
   height: 60px;
   display: flex;
@@ -159,16 +159,17 @@ header {
   font-size: 1rem;
 }
 .xplore button {
-  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   color: white;
   font-weight: 400;
-  font-size: 1, 5rem;
+  font-size: 1, 8rem;
   padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
-  box-shadow: 2px 1px 16px -3px #000000;
   margin-top: 1rem;
   transition: transform 200ms;
+  cursor: pointer;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 2px 1px 16px -3px #f6f6f6;
 }
 .xplore button:hover {
   transform: scale(1.02);
@@ -213,6 +214,10 @@ a {
   color: inherit;
 }
 
+body {
+  background-color: #f6f6f6;
+}
+
 .banner img {
   width: 100%;
   height: 60vh;
@@ -223,9 +228,25 @@ a {
 .resto-main {
   padding: 0;
 }
+.resto-main h3 {
+  padding: 0 0.8rem;
+  margin-top: auto;
+  text-transform: uppercase;
+  font-weight: 400;
+  position: relative;
+}
+.resto-main h3::after {
+  content: "";
+  position: absolute;
+  top: 1.5rem;
+  left: 0.9rem;
+  height: 0.25rem;
+  width: 3rem;
+  background-color: #99E2D0;
+}
 @media (min-width: 768px) {
   .resto-main {
-    padding: 0 1rem;
+    padding: 0 12rem;
     background: white;
   }
 }
@@ -247,8 +268,8 @@ a {
 .resto-main .resto_title i {
   font-size: 23px;
   position: absolute;
-  right: 2.6rem;
-  top: 15%;
+  right: 4rem;
+  top: 50%;
   transform: translateY(-50%);
 }
 @media (min-width: 768px) {
@@ -273,14 +294,22 @@ a {
   gap: 1rem;
 }
 .resto-main .menu .menu_category {
-  background: white;
   border-radius: 1rem;
+  margin: 0 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  overflow: hidden;
 }
 .resto-main .menu-item {
+  background: white;
   display: flex;
-  overflow: hidden;
   border-radius: 1rem;
   box-shadow: 2px 2px 2px #7e7e7e;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 0.2rem;
+  margin-bottom: 0.1rem;
 }
 .resto-main .menu-item .menu-item__price {
   margin-left: auto;
@@ -293,10 +322,19 @@ a {
 .resto-main .menu-item .menu-item__description {
   padding: 1rem;
   border-radius: 1rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.resto-main .menu-item p, .resto-main .menu-item h4 {
+.resto-main .menu-item .menu-item__description h4, .resto-main .menu-item .menu-item__description p {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
   margin: 0;
   padding: 0;
+}
+.resto-main .menu-item .menu-item__description p {
+  font-size: 13px;
 }
 .resto-main .menu-item .menu-item__check {
   background-color: #99E2D0;
@@ -307,6 +345,7 @@ a {
   display: grid;
   place-items: center;
   position: relative;
+  flex-shrink: 0;
 }
 .resto-main .menu-item .menu-item__check i {
   display: grid;
@@ -319,6 +358,28 @@ a {
 }
 .resto-main .menu-item:hover .menu-item__check {
   margin-right: 0;
+}
+.resto-main div.command {
+  height: 30vh;
+  display: grid;
+  place-items: center;
+}
+.resto-main div.command button {
+  color: white;
+  font-weight: 400;
+  font-size: 1, 8rem;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 2rem;
+  margin-top: 1rem;
+  transition: transform 200ms;
+  cursor: pointer;
+  background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
+  box-shadow: 2px 1px 16px -3px #f6f6f6;
+}
+.resto-main div.command button:hover {
+  transform: scale(1.02);
+  opacity: 0.9;
 }
 
 

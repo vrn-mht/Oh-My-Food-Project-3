@@ -1,5 +1,10 @@
 @import"../utils/mixin.scss";
 @import"../utils/variables.scss";
+body {
+    background-color: $lightgrey;
+}
+
+
 .banner img {
     width: 100%;
     height: 60vh;
@@ -9,9 +14,26 @@
 
 .resto-main {
 padding: 0;
+h3 {
+    padding: 0 0.8rem;
+    margin-top: auto;
+    text-transform: uppercase;
+    font-weight: 400;
+    position: relative; 
+    &::after {
+        content: "";
+        position: absolute;
+        top: 1.5rem;
+        left: 0.9rem;
+        height: 0.25rem;
+        width: 3rem;
+        background-color: $tertiary-color;
+    }
+}
 @media (min-width:$breakpoint){
-    padding: 0 1rem;
+    padding: 0 12rem;
     background:$white;
+    
     
 }
 .resto_title h2 {
@@ -29,8 +51,8 @@ padding: 0;
             i {
                 font-size: 23px;
                 position: absolute;
-                right: 2.6rem;
-                top: 15%;
+                right: 4rem;
+                top: 50%;
                 transform: translateY(-50%);
                 @media (min-width: $breakpoint) {
                     right: 18rem;
@@ -54,16 +76,27 @@ padding: 0;
         display: grid;
         gap: 1rem;
         .menu_category {
-            background: $white;
-            border-radius: $radius-1;
-  
-     }
-     }
-     .menu-item {
+            border-radius: 1rem;
+            margin: 0 0.8rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            overflow: hidden;
+            
+        }
+    }
+    .menu-item {
+        background: $white;
         display: flex;
-        overflow: hidden;
         border-radius:$radius-1;
         box-shadow: 2px 2px 2px $grey;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        margin: 0 0.2rem;
+        margin-bottom: 0.1rem;
+
+
+       
         
         .menu-item__price {
             margin-left: auto;
@@ -76,12 +109,22 @@ padding: 0;
         .menu-item__description {
             padding: 1rem;
             border-radius:$radius-1;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            h4,p {
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                margin: 0;
+                padding: 0;
+            }
+            p {
+               font-size: 13px;
+            }
           
         }
-        p,h4 {
-            margin: 0;
-            padding: 0;
-        }
+        
         .menu-item__check {
             background-color: $tertiary-color;
             $button-width: 4rem;
@@ -92,6 +135,7 @@ padding: 0;
             display: grid;
             place-items: center;
             position: relative; 
+            flex-shrink: 0;
             i {
                 display: grid;
                 place-items: center;
@@ -106,8 +150,16 @@ padding: 0;
         &:hover .menu-item__check {
             margin-right: 0      
         }
+
        
      }
-     
+     div.command {
+        height: 30vh;
+        display: grid;
+        place-items: center;
+        button {
+            @include button 
+        }
+     }
     }
     
