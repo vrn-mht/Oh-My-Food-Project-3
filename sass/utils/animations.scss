@@ -1,0 +1,10 @@
+@keyframes apparence {
+    0% {
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    100% {
+        translate: 0;
+        opacity: 1;
+    }   
+}

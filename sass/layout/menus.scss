@@ -3,14 +3,21 @@
 
 .menus  {background-color:variables.$lightgrey;
     margin-bottom: 2rem;
+    padding: 0 1rem;
   
     .menus__cards{
         display: flex;
         flex-direction: column;
         gap : 2rem;
         @media screen and (min-width: 900px) {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            display: flex;
+            justify-content: center;
+            padding: 3.5rem;
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: center;
+            column-gap: 6.5rem;
+            row-gap: 3.5rem;
         }
         .new {
             position: relative;
@@ -29,6 +36,12 @@
         }
     }
     .cards {
+        @media screen and (min-width : 900px){
+            width: 490px;
+            
+        }
+       
+       
         img {
             height: 180px;
             object-fit: cover;

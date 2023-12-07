@@ -3,6 +3,21 @@ footer {
     background-color:variables.$darkgrey;
     padding: 1rem 2rem;
     color: white;
+    @media (min-width:$breakpoint){
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 7rem;
+        font-size: 1rem;
+        .display-footer {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            .media-margin {
+                margin-left: 1rem;
+            }
+        }
+    }
     h2 {
         font-family:'Shrikhand', serif;
         font-weight: 400;

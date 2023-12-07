@@ -11,10 +11,6 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-main {
-  padding: 0 1rem;
-}
-
 h1 {
   font-size: 20px;
 }
@@ -52,6 +48,7 @@ header {
 .menus {
   background-color: #f6f6f6;
   margin-bottom: 2rem;
+  padding: 0 1rem;
 }
 .menus .menus__cards {
   display: flex;
@@ -60,8 +57,14 @@ header {
 }
 @media screen and (min-width: 900px) {
   .menus .menus__cards {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    justify-content: center;
+    padding: 3.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    column-gap: 6.5rem;
+    row-gap: 3.5rem;
   }
 }
 .menus .menus__cards .new {
@@ -78,6 +81,11 @@ header {
   place-items: center;
   right: 1rem;
   top: 1rem;
+}
+@media screen and (min-width: 900px) {
+  .menus .cards {
+    width: 490px;
+  }
 }
 .menus .cards img {
   height: 180px;
@@ -181,6 +189,23 @@ footer {
   padding: 1rem 2rem;
   color: white;
 }
+@media (min-width: 768px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 7rem;
+    font-size: 1rem;
+  }
+  footer .display-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+  footer .display-footer .media-margin {
+    margin-left: 1rem;
+  }
+}
 footer h2 {
   font-family: "Shrikhand", serif;
   font-weight: 400;
@@ -194,10 +219,6 @@ footer h2 {
 body {
   margin: 0px;
   font-family: "Roboto", sans-serif;
-}
-
-main {
-  padding: 0 1rem;
 }
 
 h1 {
@@ -214,34 +235,41 @@ a {
   color: inherit;
 }
 
-body {
+@keyframes apparence {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
+  }
+  100% {
+    translate: 0;
+    opacity: 1;
+  }
+}
+#history {
   background-color: #f6f6f6;
 }
-
-header i {
+#history header i {
   position: absolute;
   left: 1rem;
   top: 1rem;
 }
-
-.banner img {
+#history .banner img {
   width: 100%;
   height: 60vh;
   object-fit: cover;
   display: block;
 }
-
-.resto-main {
+#history .resto-main {
   padding: 0;
 }
-.resto-main h3 {
+#history .resto-main h3 {
   padding: 0 0.8rem;
   margin-top: auto;
   text-transform: uppercase;
   font-weight: 400;
   position: relative;
 }
-.resto-main h3::after {
+#history .resto-main h3::after {
   content: "";
   position: absolute;
   top: 1.5rem;
@@ -251,42 +279,47 @@ header i {
   background-color: #99E2D0;
 }
 @media (min-width: 768px) {
-  .resto-main {
+  #history .resto-main {
     padding: 0 11rem;
     background: white;
   }
 }
-.resto-main .resto_title h2 {
+#history .resto-main .resto_title h2 {
   font-family: "Shrikhand", serif;
 }
 @media (min-width: 768px) {
-  .resto-main .resto_title h2 {
+  #history .resto-main .resto_title h2 {
     text-align: center;
   }
 }
-.resto-main .resto_title {
+#history .resto-main .resto_title {
   position: relative;
   padding: 0 0.9rem;
   margin-top: -2rem;
   background: #f6f6f6;
   border-radius: 2.3rem 2.3em 0 0;
 }
-.resto-main .resto_title i {
+#history .resto-main .resto_title i {
   font-size: 23px;
   position: absolute;
   right: 4rem;
   top: 50%;
   transform: translateY(-50%);
 }
+@media (max-width: 335px) {
+  #history .resto-main .resto_title i {
+    right: 2rem;
+  }
+}
 @media (min-width: 768px) {
-  .resto-main .resto_title i {
+  #history .resto-main .resto_title i {
     right: 18rem;
   }
 }
-.resto-main .resto_title .fa-solid {
+#history .resto-main .resto_title .fa-solid {
   opacity: 0;
 }
-.resto-main .resto_title .fa-solid:hover {
+#history .resto-main .resto_title .fa-solid:hover {
   opacity: 1;
   color: transparent;
   background-clip: text;
@@ -294,17 +327,17 @@ header i {
   transition: all 0.4s ease-in-out;
   background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
 }
-.resto-main .menu {
+#history .resto-main .menu {
   background-color: #f6f6f6;
   display: grid;
   gap: 1rem;
 }
 @media (min-width: 768px) {
-  .resto-main .menu {
+  #history .resto-main .menu {
     padding: 0 6rem;
   }
 }
-.resto-main .menu .menu_category {
+#history .resto-main .menu .menu_category {
   border-radius: 1rem;
   margin: 0 0.8rem;
   display: flex;
@@ -312,7 +345,7 @@ header i {
   gap: 0.8rem;
   overflow: hidden;
 }
-.resto-main .menu-item {
+#history .resto-main .menu-item {
   background: white;
   display: flex;
   border-radius: 1rem;
@@ -321,8 +354,11 @@ header i {
   text-overflow: ellipsis;
   margin: 0 0.2rem;
   margin-bottom: 0.1rem;
+  animation-name: apparence;
+  animation-duration: 3s;
+  animation-iteration-count: initial;
 }
-.resto-main .menu-item .menu-item__price {
+#history .resto-main .menu-item .menu-item__price {
   margin-left: auto;
   font-weight: 900;
   display: flex;
@@ -330,24 +366,24 @@ header i {
   margin-right: 1rem;
   margin-top: 1rem;
 }
-.resto-main .menu-item .menu-item__description {
+#history .resto-main .menu-item .menu-item__description {
   padding: 1rem;
   border-radius: 1rem;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.resto-main .menu-item .menu-item__description h4, .resto-main .menu-item .menu-item__description p {
+#history .resto-main .menu-item .menu-item__description h4, #history .resto-main .menu-item .menu-item__description p {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   margin: 0;
   padding: 0;
 }
-.resto-main .menu-item .menu-item__description p {
+#history .resto-main .menu-item .menu-item__description p {
   font-size: 13px;
 }
-.resto-main .menu-item .menu-item__check {
+#history .resto-main .menu-item .menu-item__check {
   background-color: #99E2D0;
   margin-right: -4rem;
   width: 4rem;
@@ -358,7 +394,7 @@ header i {
   position: relative;
   flex-shrink: 0;
 }
-.resto-main .menu-item .menu-item__check i {
+#history .resto-main .menu-item .menu-item__check i {
   display: grid;
   place-items: center;
   background: white;
@@ -367,15 +403,15 @@ header i {
   border-radius: 50%;
   color: #99E2D0;
 }
-.resto-main .menu-item:hover .menu-item__check {
+#history .resto-main .menu-item:hover .menu-item__check {
   margin-right: 0;
 }
-.resto-main div.command {
+#history .resto-main div.command {
   height: 30vh;
   display: grid;
   place-items: center;
 }
-.resto-main div.command button {
+#history .resto-main div.command button {
   color: white;
   font-weight: 400;
   font-size: 1, 8rem;
@@ -388,7 +424,7 @@ header i {
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
   box-shadow: 2px 1px 16px -3px #f6f6f6;
 }
-.resto-main div.command button:hover {
+#history .resto-main div.command button:hover {
   transform: scale(1.02);
   opacity: 0.9;
 }

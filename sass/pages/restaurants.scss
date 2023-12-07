@@ -1,43 +1,43 @@
 @import"../utils/mixin.scss";
 @import"../utils/variables.scss";
-body {
+@import"../utils/animations.scss";
+#history {
     background-color: $lightgrey;
-}
-
-header i {
-    position: absolute;
-    left: 1rem;
-    top: 1rem;
-}
-.banner img {
-    width: 100%;
-    height: 60vh;
-    object-fit: cover;
-    display: block;
-}
-
-.resto-main {
-padding: 0;
-h3 {
-    padding: 0 0.8rem;
-    margin-top: auto;
-    text-transform: uppercase;
-    font-weight: 400;
-    position: relative; 
-    &::after {
-        content: "";
-        position: absolute;
-        top: 1.5rem;
-        left: 0.9rem;
-        height: 0.25rem;
-        width: 3rem;
-        background-color: $tertiary-color;
-    }
-}
-@media (min-width:$breakpoint){
-    padding: 0 11rem;
-    background:$white;
     
+    header i {
+        position: absolute;
+        left: 1rem;
+        top: 1rem;
+    }
+    .banner img {
+        width: 100%;
+        height: 60vh;
+        object-fit: cover;
+        display: block;
+    }
+    
+    .resto-main {
+        padding: 0;
+        h3 {
+            padding: 0 0.8rem;
+            margin-top: auto;
+            text-transform: uppercase;
+            font-weight: 400;
+            position: relative; 
+            &::after {
+                content: "";
+                position: absolute;
+                top: 1.5rem;
+                left: 0.9rem;
+                height: 0.25rem;
+                width: 3rem;
+                background-color: $tertiary-color;
+            }
+        }
+        @media (min-width:$breakpoint){
+            padding: 0 11rem;
+            background:$white;
+            
     
 }
 .resto_title h2 {
@@ -45,14 +45,17 @@ h3 {
     @media (min-width: $breakpoint) {
         text-align: center;
     }
-     }
-     .resto_title { 
-        position: relative;
+}
+.resto_title { 
+    position: relative;
         padding: 0 0.9rem;
         margin-top: -2rem;
         background:$lightgrey;
         border-radius: 2.3rem 2.3em 0 0;
-            i {
+        i {
+                @media (max-width:335px){
+                    right: 2rem;
+                }
                 font-size: 23px;
                 position: absolute;
                 right: 4rem;
@@ -61,21 +64,21 @@ h3 {
                 @media (min-width: $breakpoint) {
                     right: 18rem;
                 }
-              }
-
-        .fa-solid {
-            opacity: 0;
-            &:hover {
-                opacity: 1;
+            }
+            
+            .fa-solid {
+                opacity: 0;
+                &:hover {
+                    opacity: 1;
                 color: transparent;
                 background-clip: text;
                 -webkit-background-clip: text;
                 transition: all 0.4s ease-in-out;
                @include gradient(1);
             } 
-          }
-     }
-     .menu {
+        }
+    }
+    .menu {
         background-color: $lightgrey;
         display: grid;
         gap: 1rem;
@@ -89,6 +92,7 @@ h3 {
             flex-direction: column;
             gap: 0.8rem;
             overflow: hidden; 
+           
         }
     }
     .menu-item {
@@ -100,10 +104,11 @@ h3 {
         text-overflow: ellipsis;
         margin: 0 0.2rem;
         margin-bottom: 0.1rem;
-
-
+        animation-name: apparence;
+        animation-duration: 3s;
+        animation-iteration-count: initial;
        
-        
+
         .menu-item__price {
             margin-left: auto;
             font-weight: 900;
@@ -151,21 +156,22 @@ h3 {
                 border-radius: 50%;
                 color: $tertiary-color;
             }
-           
+            
         }
         &:hover .menu-item__check {
             margin-right: 0      
         }
 
-       
-     }
-     div.command {
+        
+    }
+    div.command {
         height: 30vh;
         display: grid;
         place-items: center;
         button {
             @include button 
         }
-     }
     }
-    
+}
+
+}
