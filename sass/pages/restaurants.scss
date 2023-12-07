@@ -96,6 +96,11 @@
         }
     }
     .menu-item {
+        @for $i from 1 through 3 {
+            &:nth-child(#{$i}) {
+                animation-delay: 100ms*$i;
+            }
+        }
         background: $white;
         display: flex;
         border-radius:$radius-1;
