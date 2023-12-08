@@ -175,6 +175,7 @@
         display: grid;
         place-items: center;
         button {
+
             @include button 
         }
     }

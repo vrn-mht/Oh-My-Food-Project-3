@@ -2,8 +2,11 @@
 
 .xplore {
     text-align: center;
+    background-color:$lightgrey;
+    padding-bottom: 4rem;
     & h2 {
-
+      padding-top: 2rem;
+      padding-bottom: 0;
       font-size: 2rem;
      }
      & p {
@@ -54,3 +57,19 @@
   }
   
 }
+.margin-class {
+  @media screen and (min-width: $breakpoint) {
+    margin: 0rem 6rem!important;
+
+  }
+  
+}
+.fonction-resto{
+  padding-bottom: 1rem;
+  margin: 0;
+  padding-top: 0;
+
+}
+ 
+  
+ 

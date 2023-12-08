@@ -2,8 +2,7 @@
 @import"../utils/mixin.scss";
 
 .menus  {background-color:variables.$lightgrey;
-    margin-bottom: 2rem;
-    padding: 0 1rem;
+    padding: 4rem 1rem;
   
     .menus__cards{
         display: flex;

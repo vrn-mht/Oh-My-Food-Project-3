@@ -12,7 +12,7 @@ body {
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 h2 {
@@ -40,6 +40,7 @@ header {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  color: #353535;
 }
 .city i {
   font-size: 1.2rem;
@@ -47,8 +48,7 @@ header {
 
 .menus {
   background-color: #f6f6f6;
-  margin-bottom: 2rem;
-  padding: 0 1rem;
+  padding: 4rem 1rem;
 }
 .menus .menus__cards {
   display: flex;
@@ -123,16 +123,31 @@ header {
   background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
 }
 
+.order-list {
+  margin-left: 20px;
+  padding: 3rem 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .order-list h2 {
+    margin-left: 7.1rem;
+  }
+}
 .order-list ol {
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+  padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .order-list ol {
+    justify-content: center;
+  }
 }
 .order-list li {
   list-style: none;
   background-color: #f6f6f6;
   padding: 1rem 2rem;
-  flex-grow: 1;
+  width: 322.49px;
   box-shadow: 2px 1px 16px -3px #f6f6f6;
   border-radius: 1rem;
   height: 60px;
@@ -159,8 +174,12 @@ header {
 
 .xplore {
   text-align: center;
+  background-color: #f6f6f6;
+  padding-bottom: 4rem;
 }
 .xplore h2 {
+  padding-top: 2rem;
+  padding-bottom: 0;
   font-size: 2rem;
 }
 .xplore p {
@@ -169,11 +188,11 @@ header {
 .xplore button {
   color: white;
   font-weight: 400;
-  font-size: 1, 8rem;
-  padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
   margin-top: 1rem;
+  width: 218px;
+  height: 50px;
   transition: transform 200ms;
   cursor: pointer;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
@@ -220,6 +239,18 @@ header {
     transform: rotate(360deg);
   }
 }
+@media screen and (min-width: 768px) {
+  .margin-class {
+    margin: 0rem 6rem !important;
+  }
+}
+
+.fonction-resto {
+  padding-bottom: 1rem;
+  margin: 0;
+  padding-top: 0;
+}
+
 footer {
   background-color: #353535;
   padding: 1rem 2rem;
@@ -246,6 +277,7 @@ footer h2 {
   font-family: "Shrikhand", serif;
   font-weight: 400;
   padding: 1rem 0;
+  width: 139px;
 }
 
 *, ::before, ::after {
@@ -258,7 +290,7 @@ body {
 }
 
 h1 {
-  font-size: 20px;
+  font-size: 16px;
 }
 
 h2 {
@@ -460,11 +492,11 @@ a {
 #history .resto-main div.command button {
   color: white;
   font-weight: 400;
-  font-size: 1, 8rem;
-  padding: 1rem 2rem;
   border: none;
   border-radius: 2rem;
   margin-top: 1rem;
+  width: 218px;
+  height: 50px;
   transition: transform 200ms;
   cursor: pointer;
   background-image: linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));

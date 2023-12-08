@@ -1,16 +1,32 @@
 @use"../utils/variables.scss";
 @import "../utils/mixin.scss";
 .order-list {
+    margin-left: 20px;
+    padding: 3rem 0.5rem;
+
+    h2 {
+        @media  screen and (min-width: $breakpoint) {
+            
+            margin-left: 7.1rem;
+          
+            
+        }
+    }
+
     & ol {
         display: flex;
         flex-wrap: wrap;
         gap: 1rem; 
+        padding: 0;
+        @media screen and (min-width:$breakpoint) {
+            justify-content: center;
+         }
     }
     & li {  
         list-style: none;
         background-color:variables.$lightgrey;
         padding: 1rem 2rem;
-        flex-grow: 1;
+        width: 322.49px;
        @include base-shadow;
        border-radius: 1rem;
        height: 60px;
