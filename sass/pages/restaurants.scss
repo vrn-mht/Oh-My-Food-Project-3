@@ -34,12 +34,14 @@
                 background-color: $tertiary-color;
             }
         }
-        @media (min-width:$breakpoint){
-            padding: 0 11rem;
-            background:$white;
+        @media screen and (min-width:$breakpoint){
+            padding: 0 4rem;
+            background:$white;   
+        }
+        @media screen and (min-width:1200px){
+            padding: 0rem 11rem ;
             
-    
-}
+        }
 .resto_title h2 {
     font-family: 'Shrikhand', serif;
     @media (min-width: $breakpoint) {
@@ -53,16 +55,20 @@
         background:$lightgrey;
         border-radius: 2.3rem 2.3em 0 0;
         i {
-                @media (max-width:335px){
+                @media screen and (max-width:335px){
                     right: 2rem;
                 }
                 font-size: 23px;
                 position: absolute;
-                right: 4rem;
+                right: 18rem;
                 top: 50%;
                 transform: translateY(-50%);
-                @media (min-width: $breakpoint) {
+                @media screen and (min-width:$breakpoint) {
+                    right: 7rem;
+                }
+                @media screen  and (min-width:1000px){
                     right: 18rem;
+                    
                 }
             }
             

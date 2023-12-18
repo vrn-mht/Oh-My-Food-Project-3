@@ -127,7 +127,7 @@ header {
   margin-left: 20px;
   padding: 3rem 0.5rem;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .order-list h2 {
     margin-left: 7.1rem;
   }
@@ -138,7 +138,7 @@ header {
   gap: 1rem;
   padding: 0;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .order-list ol {
     justify-content: center;
   }
@@ -239,7 +239,7 @@ header {
     transform: rotate(360deg);
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 767px) {
   .margin-class {
     margin: 0rem 6rem !important;
   }
@@ -256,7 +256,7 @@ footer {
   padding: 1rem 2rem;
   color: white;
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   footer {
     display: flex;
     flex-direction: row-reverse;
@@ -346,16 +346,21 @@ a {
   width: 3rem;
   background-color: #99E2D0;
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 767px) {
   #history .resto-main {
-    padding: 0 11rem;
+    padding: 0 4rem;
     background: white;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #history .resto-main {
+    padding: 0rem 11rem;
   }
 }
 #history .resto-main .resto_title h2 {
   font-family: "Shrikhand", serif;
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   #history .resto-main .resto_title h2 {
     text-align: center;
   }
@@ -370,16 +375,21 @@ a {
 #history .resto-main .resto_title i {
   font-size: 23px;
   position: absolute;
-  right: 4rem;
+  right: 18rem;
   top: 50%;
   transform: translateY(-50%);
 }
-@media (max-width: 335px) {
+@media screen and (max-width: 335px) {
   #history .resto-main .resto_title i {
     right: 2rem;
   }
 }
-@media (min-width: 768px) {
+@media screen and (min-width: 767px) {
+  #history .resto-main .resto_title i {
+    right: 7rem;
+  }
+}
+@media screen and (min-width: 1000px) {
   #history .resto-main .resto_title i {
     right: 18rem;
   }
@@ -400,7 +410,7 @@ a {
   display: grid;
   gap: 1rem;
 }
-@media (min-width: 768px) {
+@media (min-width: 767px) {
   #history .resto-main .menu {
     padding: 0 6rem;
   }
