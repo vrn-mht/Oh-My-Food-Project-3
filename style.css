@@ -309,7 +309,6 @@ a {
     opacity: 0;
   }
   100% {
-    translate: 0;
     opacity: 1;
   }
 }
@@ -359,6 +358,7 @@ a {
 }
 #history .resto-main .resto_title h2 {
   font-family: "Shrikhand", serif;
+  font-size: 1.6rem;
 }
 @media (min-width: 767px) {
   #history .resto-main .resto_title h2 {
@@ -375,7 +375,7 @@ a {
 #history .resto-main .resto_title i {
   font-size: 23px;
   position: absolute;
-  right: 18rem;
+  right: 3rem;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -486,7 +486,7 @@ a {
   display: grid;
   place-items: center;
   background: white;
-  aspect-ratio: 1;
+  aspect-ratio: 1/1;
   width: 2rem;
   border-radius: 50%;
   color: #99E2D0;
