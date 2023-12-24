@@ -4,15 +4,7 @@
     margin-left: 20px;
     padding: 3rem 0.5rem;
 
-    h2 {
-        @media  screen and (min-width: $breakpoint) {
-            
-            margin-left: 7.1rem;
-          
-            
-        }
-    }
-
+   
     & ol {
         display: flex;
         flex-wrap: wrap;
@@ -23,10 +15,20 @@
          }
     }
     & li {  
+        @media screen and (min-width:609px) {
+            width: auto;  
+        }
+        @media screen and (min-width:615px){  
+        flex-grow: 0;   
+        }
+        @media screen and  (min-width:915px){
+            flex-grow: 1;
+        }
+        flex-grow: 1;
         list-style: none;
         background-color:variables.$lightgrey;
         padding: 1rem 2rem;
-        width: 322.49px;
+        width: 100%;
        @include base-shadow;
        border-radius: 1rem;
        height: 60px;
@@ -44,13 +46,10 @@
         text-align: center;
         position: relative;
         left: -2.6rem;
-        
        }
        & i.fas {
         margin-right: 1rem;
         color: variables.$grey;
        }
     }
-
-
 }

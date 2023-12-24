@@ -10,10 +10,15 @@
       font-size: 2rem;
      }
      & p {
-       font-size: 1rem;
+      font-weight: 300;
+      padding: 0.5rem;
      }
      & button {
+      p {
+        padding: 0;
+      }
        @include button
+       
      }
    }
    .loader {
