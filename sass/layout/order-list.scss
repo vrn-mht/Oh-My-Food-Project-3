@@ -6,13 +6,9 @@
 
     h2 {
         @media  screen and (min-width: $breakpoint) {
-            
             margin-left: 7.1rem;
-          
-            
         }
     }
-
     & ol {
         display: flex;
         flex-wrap: wrap;
@@ -27,6 +23,7 @@
         background-color:variables.$lightgrey;
         padding: 1rem 2rem;
         width: 322.49px;
+        transition: 0.2s;
        @include base-shadow;
        border-radius: 1rem;
        height: 60px;
@@ -34,6 +31,9 @@
        align-items: center;
        &:hover {
         @include zoom;
+        & i.fas {
+            color: $primary-color;
+        }
        }
        .steps {
         background:variables.$primary-color;
@@ -44,13 +44,10 @@
         text-align: center;
         position: relative;
         left: -2.6rem;
-        
        }
        & i.fas {
         margin-right: 1rem;
         color: variables.$grey;
        }
     }
-
-
 }

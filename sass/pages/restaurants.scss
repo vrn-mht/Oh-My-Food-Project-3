@@ -3,7 +3,6 @@
 @import"../utils/animations.scss";
 #history {
     background-color: $lightgrey;
-    
     header i {
         position: absolute;
         left: 1rem;
@@ -11,9 +10,12 @@
     }
     .banner img {
         width: 100%;
-        height: 60vh;
         object-fit: cover;
         display: block;
+        height: 50vh;
+        @media screen and (min-width: 425px) {    
+             height: 40vh
+            }
     }
     
     .resto-main {
@@ -35,11 +37,13 @@
             }
         }
         @media (min-width:$breakpoint){
-            padding: 0 11rem;
+            padding: 0rem 6rem;
             background:$white;
-            
-    
-}
+            }
+            @media  screen and (min-width:$breakdesktop) {
+                padding: 0rem 11rem;
+                
+            }
 .resto_title h2 {
     font-family: 'Shrikhand', serif;
     @media (min-width: $breakpoint) {
@@ -52,29 +56,50 @@
         margin-top: -2rem;
         background:$lightgrey;
         border-radius: 2.3rem 2.3em 0 0;
-        i {
+        .heart {
+            font-size: 23px;
+            position: absolute;
+            right: 4.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: 0.4s;
+            &:hover {
+                opacity: 0;
+            }
                 @media (max-width:335px){
                     right: 2rem;
                 }
-                font-size: 23px;
-                position: absolute;
-                right: 4rem;
-                top: 50%;
-                transform: translateY(-50%);
                 @media (min-width: $breakpoint) {
-                    right: 18rem;
+                    right: 3rem;
+                }
+                @media screen and (min-width:1024px) {
+                    right: 16rem;  
+                }
+                @media  screen and (min-width:$breakdesktop) {
+                    right: 19.7rem;
                 }
             }
-            
-            .fa-solid {
+            .heartTwo {
                 opacity: 0;
+                font-size: 23px;
+                position: absolute;
+                right: 4.5rem;
+                top: 50%;
+                transform: translateY(-50%);
+                @media (max-width:335px){
+                    right: 2rem;
+                }
+                @media (min-width: $breakpoint) {
+                    right: 3rem;
+                }
+                @media screen and (min-width:1024px) {
+                    right: 16rem;  
+                }
+                @media  screen and (min-width:$breakdesktop) {
+                    right: 19.7rem;
+                }
                 &:hover {
                     opacity: 1;
-                color: transparent;
-                background-clip: text;
-                -webkit-background-clip: text;
-                transition: all 0.4s ease-in-out;
-               @include gradient(1);
             } 
         }
     }
@@ -82,7 +107,7 @@
         background-color: $lightgrey;
         display: grid;
         gap: 1rem;
-        @media (min-width: $breakpoint) {
+        @media screen and (min-width: $breakpoint) {
             padding: 0 6rem;
         }
         .menu_category {
@@ -104,11 +129,11 @@
         background: $white;
         display: flex;
         border-radius:$radius-1;
-        box-shadow: 2px 2px 2px $grey;
+        @include base-shadow;
         overflow: hidden;
         text-overflow: ellipsis;
         margin: 0 0.2rem;
-        margin-bottom: 0.1rem;
+        margin-bottom: 0.2rem;
         animation-name: apparence;
         animation-duration: 3s;
         animation-iteration-count: initial;
@@ -157,7 +182,7 @@
                 display: grid;
                 place-items: center;
                 background: $white;
-                aspect-ratio: 1;
+                aspect-ratio: 1/1;
                 width: 2rem;
                 border-radius: 50%;
                 color: $tertiary-color;
@@ -175,8 +200,7 @@
         display: grid;
         place-items: center;
         button {
-
-            @include button 
+         @include button 
         }
     }
 }

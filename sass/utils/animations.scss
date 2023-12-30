@@ -4,7 +4,22 @@
         opacity: 0;
     }
     100% {
-        translate: 0;
+    
         opacity: 1;
     }   
 }
+
+@keyframes disappear {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(0);
+    }  
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+    
+  }

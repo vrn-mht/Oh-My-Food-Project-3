@@ -45,7 +45,7 @@
             height: 180px;
             object-fit: cover;
             width: 100%;
-            border-radius: 2rem 2rem 0 0;
+            border-radius: 15px 15px 0 0;
             display: flex;
         }
        
@@ -55,11 +55,36 @@
         border-radius: 0 0 1rem 1rem;  
         display: flex;
         flex-direction: column;
-    
-
         h3,p {
             margin: 0.5rem;
         }
+        p {
+            margin-top: 0;
+        }
+        .heart {
+           width: 22px;
+           height: 21px;
+           position: absolute;
+           top: 50%;
+           right: 1rem;
+           border-radius: inherit;
+           &:hover {
+            opacity: 0;
+           }
+        }
+        .heartTwo {
+            width: 22px;
+            height: 21px;
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            border-radius: inherit;
+            opacity: 0;
+            &:hover {
+                opacity: 1;
+            }
+        }
+        
         
         i {
             font-size: 2rem;

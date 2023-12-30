@@ -1,6 +1,6 @@
 @import"../utils/variables.scss";
 @mixin base-shadow { 
-    box-shadow:2px 1px 16px -3px $lightgrey;
+    box-shadow:2px 2px 4px #00000012;
 }
 @mixin zoom {
     transform: scale(1.02);
