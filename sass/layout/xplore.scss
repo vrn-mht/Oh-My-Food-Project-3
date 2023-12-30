@@ -11,11 +11,20 @@
       font-size: 2rem;
      }
      & p {
-       font-size: 1rem;
+      font-weight: 300;
+      padding: 0.5rem;
      }
      & button {
+<<<<<<< HEAD
        @include button;
        font-size:1rem;
+=======
+      p {
+        padding: 0;
+      }
+       @include button
+       
+>>>>>>> 53bf37d34baa3610866fa88e1d45b7442e7f40b8
      }
    }
    .loader {
