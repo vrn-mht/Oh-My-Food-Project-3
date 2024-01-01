@@ -6,7 +6,7 @@
     header i {
         position: absolute;
         left: 1rem;
-        top: 1.5rem;
+       top: 1.7rem;
     }
     .banner img {
         width: 100%;
@@ -38,13 +38,11 @@
         }
         @media (min-width:$breakpoint){
             padding: 0 11rem;
-            background:$white;
-            
-    
+            background:$white;    
 }
 .resto_title h2 {
     font-family: 'Shrikhand', serif;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     @media (min-width: $breakpoint) {
         text-align: center;
     }
@@ -55,7 +53,10 @@
         margin-top: -2rem;
         background:$lightgrey;
         border-radius: 2.3rem 2.3em 0 0;
-        i {
+        img {
+            position: absolute;
+            top: 41%;
+            right: 2rem;
                 @media (max-width:335px){
                     right: 2rem;
                 }
@@ -63,30 +64,30 @@
                     right: 3rem;
                 }
                 @media screen and (min-width:1024px) {
-                    right: 16rem;  
+                    right: 9rem;  
                 }
                 @media  screen and (min-width:$breakdesktop) {
                     right: 19.7rem;
                 }
-            }
-            .heartTwo {
-                opacity: 0;
-                font-size: 23px;
-                position: absolute;
-                right: 4rem;
-                top: 50%;
-                transform: translateY(-50%);
-                @media (min-width: $breakpoint) {
-                    right: 18rem;
+               
+                .heart{
+                    transition: all 0.2s ease 0s;
+                    &:hover{
+                        opacity: 0;
+                    }
                 }
-            }
+
+                }
+                .heartTwo {
+                    opacity: 0;  
+                    @media  screen and (min-width:$breakdesktop) {
+                        right: 19.7rem;
+                    }
+                    &:hover{
+                        opacity: 1;
+                    }
+                    }
             
-            .fa-solid {
-                opacity: 0;
-                &:hover {
-                    opacity: 1;
-            } 
-        }
     }
     .menu {
         background-color: $lightgrey;
