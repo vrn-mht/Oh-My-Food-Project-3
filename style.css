@@ -102,7 +102,7 @@ header {
   margin-top: 0;
 }
 .menus .cards__description .heart {
-  width: 22px;
+  width: 23px;
   height: 21px;
   position: absolute;
   top: 32%;
@@ -113,7 +113,7 @@ header {
   opacity: 0;
 }
 .menus .cards__description .heartTwo {
-  width: 22px;
+  width: 23px;
   height: 21px;
   position: absolute;
   top: 32%;
@@ -165,6 +165,7 @@ header {
   }
 }
 .order-list li {
+  cursor: pointer;
   list-style: none;
   background-color: #f6f6f6;
   padding: 1rem 2rem;
@@ -477,7 +478,7 @@ a {
 }
 @media screen and (min-width: 1440px) {
   #history .resto-main .resto_title img {
-    right: 19.7rem;
+    right: 21.7rem;
   }
 }
 #history .resto-main .resto_title img .heart {
@@ -491,7 +492,7 @@ a {
 }
 @media screen and (min-width: 1440px) {
   #history .resto-main .resto_title .heartTwo {
-    right: 19.7rem;
+    right: 21.7rem;
   }
 }
 #history .resto-main .resto_title .heartTwo:hover {

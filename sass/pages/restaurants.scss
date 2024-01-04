@@ -67,7 +67,7 @@
                     right: 9rem;  
                 }
                 @media  screen and (min-width:$breakdesktop) {
-                    right: 19.7rem;
+                   right: 21.7rem;
                 }
                
                 .heart{
@@ -81,7 +81,7 @@
                 .heartTwo {
                     opacity: 0;  
                     @media  screen and (min-width:$breakdesktop) {
-                        right: 19.7rem;
+                       right:21.7rem;
                     }
                     &:hover{
                         opacity: 1;
