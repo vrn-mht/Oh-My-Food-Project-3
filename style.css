@@ -463,7 +463,7 @@ a {
 }
 @media (max-width: 335px) {
   #history .resto-main .resto_title img {
-    right: 2rem;
+    right: 0.6rem;
   }
 }
 @media (min-width: 800px) {
