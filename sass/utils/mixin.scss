@@ -7,6 +7,10 @@
  }
  @mixin gradient ($opacity: 0.9) {
  background-image:linear-gradient(0deg,rgba(147,86,220,$opacity),rgba(255,121,218,$opacity));
+
+ }
+ @mixin linear {
+     background-image:linear-gradient(0deg,rgba(147,86,220,),rgba(255,121,218,));
  }
  @mixin button {
     color :white;

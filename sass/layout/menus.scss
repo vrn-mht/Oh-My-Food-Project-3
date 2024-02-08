@@ -53,49 +53,27 @@
         p {
             margin-top: 0;
         }
-        .heart {
-            width: 23px;
-            height: 21px;
-           position: absolute;
-           top: 32%;
-           right: 1rem;
-           border-radius: inherit;
-           &:hover {
-            opacity: 0;
-           }
-        }
-        .heartTwo {
-            width: 23px;
-             height: 21px;
-            position: absolute;
-            top: 32%;
-            right: 1rem;
-            border-radius: inherit;
-            opacity: 0;
-            &:hover {
-                opacity: 1;
-            }
-        }
-        
-        
         i {
             font-size: 2rem;
             position: absolute;
             right: 1rem;
             top: 50%;
             transform: translateY(-50%);
-              }
-              .fa-solid {
+            &.full {
                 opacity: 0;
-                &:hover {
-                    opacity: 1;
-                    color: transparent;
-                    background-clip: text;
-                    -webkit-background-clip: text;
-                    transition: all 0.4s ease-in-out;
-                   @include gradient(1);
-                } 
+                transition-property: all;
+                transition-duration: 1s;
+                  &:hover {
+                      opacity: 1;
+                      @include linear;
+                      color: transparent;
+                      background-clip: text;
+                      -webkit-background-clip: text;
+                       }
+
+                  }
               }
+             
        }  
     }
  }

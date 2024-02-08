@@ -101,29 +101,6 @@ header {
 .menus .cards__description p {
   margin-top: 0;
 }
-.menus .cards__description .heart {
-  width: 23px;
-  height: 21px;
-  position: absolute;
-  top: 32%;
-  right: 1rem;
-  border-radius: inherit;
-}
-.menus .cards__description .heart:hover {
-  opacity: 0;
-}
-.menus .cards__description .heartTwo {
-  width: 23px;
-  height: 21px;
-  position: absolute;
-  top: 32%;
-  right: 1rem;
-  border-radius: inherit;
-  opacity: 0;
-}
-.menus .cards__description .heartTwo:hover {
-  opacity: 1;
-}
 .menus .cards__description i {
   font-size: 2rem;
   position: absolute;
@@ -131,16 +108,17 @@ header {
   top: 50%;
   transform: translateY(-50%);
 }
-.menus .cards__description .fa-solid {
+.menus .cards__description i.full {
   opacity: 0;
+  transition-property: all;
+  transition-duration: 1s;
 }
-.menus .cards__description .fa-solid:hover {
+.menus .cards__description i.full:hover {
   opacity: 1;
+  background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  transition: all 0.4s ease-in-out;
-  background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
 }
 
 .order-list {
@@ -444,6 +422,11 @@ a {
   font-family: "Shrikhand", serif;
   font-size: 1.8rem;
 }
+@media (max-width: 340px) {
+  #history .resto-main .resto_title h2 {
+    font-size: 1.7rem;
+  }
+}
 @media (min-width: 800px) {
   #history .resto-main .resto_title h2 {
     text-align: center;
@@ -456,47 +439,46 @@ a {
   background: #f6f6f6;
   border-radius: 2.3rem 2.3em 0 0;
 }
-#history .resto-main .resto_title img {
+#history .resto-main .resto_title i {
   position: absolute;
   top: 41%;
   right: 2rem;
+  font-size: 2rem;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
 }
 @media (max-width: 335px) {
-  #history .resto-main .resto_title img {
+  #history .resto-main .resto_title i {
     right: 0.6rem;
   }
 }
 @media (min-width: 800px) {
-  #history .resto-main .resto_title img {
+  #history .resto-main .resto_title i {
     right: 3rem;
   }
 }
 @media screen and (min-width: 1024px) {
-  #history .resto-main .resto_title img {
+  #history .resto-main .resto_title i {
     right: 9rem;
   }
 }
 @media screen and (min-width: 1440px) {
-  #history .resto-main .resto_title img {
+  #history .resto-main .resto_title i {
     right: 21.7rem;
   }
 }
-#history .resto-main .resto_title img .heart {
-  transition: all 0.2s ease 0s;
-}
-#history .resto-main .resto_title img .heart:hover {
+#history .resto-main .resto_title i.full {
   opacity: 0;
+  transition-property: all;
+  transition-duration: 1s;
 }
-#history .resto-main .resto_title .heartTwo {
-  opacity: 0;
-}
-@media screen and (min-width: 1440px) {
-  #history .resto-main .resto_title .heartTwo {
-    right: 21.7rem;
-  }
-}
-#history .resto-main .resto_title .heartTwo:hover {
+#history .resto-main .resto_title i.full:hover {
   opacity: 1;
+  background-image: linear-gradient(0deg, rgb(147, 86, 220), rgb(255, 121, 218));
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 #history .resto-main .menu {
   background-color: #f6f6f6;
